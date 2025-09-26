@@ -4,7 +4,7 @@ nameTwo="Anshul"
 console.log(nameOne)
 console.log(nameTwo)
 /*Example of how stack is used.... also a copy is taken in static memory like
-in this one above a copy of nameOne is taken... primitive datatypes use static memory */
+in this one above a copy of nameOne is taken... primitive datatypes use stack */
 
 let userOne={
     email:"abc@gmail.com"
