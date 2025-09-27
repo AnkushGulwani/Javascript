@@ -75,3 +75,14 @@ console.log(Object.keys(JsUser));
 console.log(Object.values(JsUser));
 console.log(Object.entries(JsUser));
 console.log(JsUser.hasOwnProperty('IsLoggedIn'));//true
+
+//object de-structure
+
+const course={
+    name:"IIT-JEE",
+    price:"100000",
+    tutor:"anand"
+}
+
+const { name: n } = course;
+console.log(n); // Output: "IIT-JEE"
