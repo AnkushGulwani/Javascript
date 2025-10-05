@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body style="background-color: #212121; color: wheat;">
+    <ul class="language">
+        <li>JS</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(Lang) {
+        const li = document.createElement('li')
+        li.innerHTML = `${Lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Java")
+    addLanguage("C")
+    addLanguage("Python")
+
+    function addOptimisedLang(Lang) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(Lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimisedLang("Rust")
+    addOptimisedLang("C++")
+
+    //editing values
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+   // secondLang.innerHTML="HTML"
+   const newLi=document.createElement('li')
+   newLi.textContent="Mojo"
+   secondLang.replaceWith(newLi)
+
+   //another way
+   const firstLang=document.querySelector("li:first-child")
+   firstLang.outerHTML="<li>TypeScript</li>"
+
+   //remove
+   const secondChild=document.querySelector('li:nth-child(2)')
+   secondChild.remove() //removes mojo
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color: #212121; color: wheat;">
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = "oneId" //Math.random()*10
+    div.setAttribute("title","DOM-3")
+    div.style.backgroundColor="green"
+    div.style.padding="12px"
+    // div.innerText="Document object model"
+    const addText=document.createTextNode("Document object model")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+</script>
+
+</html>
